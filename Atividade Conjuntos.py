@@ -33,10 +33,10 @@ def Interseção(con1, con2):
             conjunto2.append(j)
     print("conjunto 1 {",', '.join(map(str, conjunto1)),"}, ",end='',sep="")
     print("conjunto 2 {",', '.join(map(str, conjunto2)),"}.",end=' ',sep="")
-    for var in conjunto1:
-        for var2 in conjunto2:
-            if var == var2:
-                resultado.append(var)
+    for i in conjunto1:
+        for j in conjunto2:
+            if i == j:
+                resultado.append(i)
     print('Resultado: {', ', '.join(map(str, resultado)), '}', sep="")
 
 def Diferença(con1, con2):
@@ -50,9 +50,9 @@ def Diferença(con1, con2):
             conjunto2.append(j)
     print("conjunto 1 {",', '.join(map(str, conjunto1)),"}, ",end='',sep="")
     print("conjunto 2 {",', '.join(map(str, conjunto2)),"}.",end=' ',sep="")
-    for var in conjunto1:
-        if var not in conjunto2:
-            resultado.append(var)
+    for i in conjunto1:
+        if i not in conjunto2:
+            resultado.append(i)
     print('Resultado: {', ', '.join(map(str, resultado)), '}', sep="")
   
 def Cartesiano(con1, con2):
@@ -67,13 +67,13 @@ def Cartesiano(con1, con2):
     print("conjunto 1 {",', '.join(map(str, conjunto1)),"}, ",end='',sep="")
     print("conjunto 2 {",', '.join(map(str, conjunto2)),"}.",end=' ',sep="")
     print("Resultado: {", end='')
-    for var in conjunto1:
-        for var2 in conjunto2:
-            print('(', var, ', ', sep="", end='')
-            if var == conjunto1[-1] and var2 == conjunto2[-1]:
-                print(var2, ')', sep="", end='')
+    for i in conjunto1:
+        for j in conjunto2:
+            print('(', i, ', ', sep="", end='')
+            if i == conjunto1[-1] and j == conjunto2[-1]:
+                print(j, ')', sep="", end='')
             else:
-                print(var2, '), ', sep="", end='')
+                print(j, '), ', sep="", end='')
     print('}')
   
 for line in arquivotxt:
