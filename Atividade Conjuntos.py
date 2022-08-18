@@ -109,3 +109,4 @@ for line in arquivotxt:
             contador += 1
 else:
     0
+arquivotxt.close()
